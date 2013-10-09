@@ -1,32 +1,42 @@
 [user]
-	name = Maxim Zhukov
-	email = crmaxx@gmail.com
+  name = Maxim Zhukov
+  email = crmaxx@gmail.com
 [core]
-	excludesfile = /Users/mzhukov/.gitignore_global
-	editor = subl -w
-	autocrlf = input
+  excludesfile = /Users/mzhukov/.gitignore_global
+  editor = subl -w
+  autocrlf = input
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [alias]
+  new = checkout -b
   co = checkout
   ci = commit
+  cm = commit -m
+  cam = commit -am
+  ca = commit --amend # careful
   st = status
   br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
   s = status --short
+  a = !git add . && git status
+  au = !git add -u . && git statustus
+  aa = !git add . && git add -u . && git status
+  ac = !git add . && git commit
+  acm = !git add . && git commit -m
 [color]
   ui = true
   diff = true
   branch = auto
   status = auto
 [merge]
-	tool = extMerge
+  tool = extMerge
 [mergetool "extMerge"]
-	cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	trustExitCode = false
+  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  trustExitCode = false
 [pull]
-	rebase = true
+  rebase = true
 [push]
-	default = simple
+  default = simple
+
