@@ -1,0 +1,27 @@
+# Set compilation mode. JIT = at runtime; FORCE = before execution. (JIT, FORCE, OFF, OFFIR)
+# compile.mode = FORCE
+ 
+# Dump to console all bytecode generated at runtime.
+# compile.dump = true
+ 
+# Enable verbose JIT logging (reports failed compilation)
+# jit.logging.verbose = true
+ 
+# Log require/load file searches.
+# debug.loadService = true
+ 
+# Display location of the file executed with the -S option
+# debug.scriptResolution = true
+ 
+compat.version = 1.9
+ 
+# Set the style of exception backtraces. (normal, raw, full, mri)
+backtrace.style = raw
+# Enable colorized backtraces.
+backtrace.color = true
+
+#Enables C extensions
+cext.enabled=true
+
+#generates full backtraces for the EAGAIN errno
+errno.backtrace=true

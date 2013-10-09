@@ -1,0 +1,3 @@
+export POW_DOMAINS=lodev
+export NEWRELIC_DISPATCHER=pow
+export POW_WORKERS=1

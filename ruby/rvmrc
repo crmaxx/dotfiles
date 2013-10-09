@@ -1,0 +1,2 @@
+rvm_configure_env=(CFLAGS="-O2 -pipe -fomit-frame-pointer")
+rvm_archflags="-arch x86_64"
