@@ -74,3 +74,6 @@ eval "$(direnv hook $0)"
 export PATH=$HOME/bin:$PATH
 export EDITOR='subl -w'
 unsetopt correct_all
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
