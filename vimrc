@@ -11,6 +11,10 @@
   set nocompatible
   syntax on
   set encoding=utf-8
+
+  if filereadable(expand("~/.vimrc.bundles"))
+    source ~/.vimrc.bundles
+  endif
 " }}}
 
 " Settings
