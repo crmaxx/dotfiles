@@ -428,6 +428,13 @@
 
       " set rails status line
       let g:rails_statusline = 1
+      " use SendToTmux to run the selected specs
+      let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+      " vim-rspec mappings
+      map <Leader>t :call RunCurrentSpecFile()<CR>
+      map <Leader>s :call RunNearestSpec()<CR>
+      map <Leader>l :call RunLastSpec()<CR>
+      map <Leader>a :call RunAllSpecs()<CR>
       " }}}
 
     " }}}
