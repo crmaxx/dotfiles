@@ -18,3 +18,14 @@ for name in *; do
   fi
 done
 
+for name in zsh/*; do
+  target=".oh-my-zsh/$name"
+  if [ -e "$target" ]; then
+    if [ ! -L "$target" ]; then
+      echo "WARNING: $target exists but is not a symlink."
+    fi
+  else
+    echo "Creating $target to .oh-my-zsh"
+    ln -s "$PWD/$name" "$target"
+  fi
+done
