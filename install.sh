@@ -11,7 +11,7 @@ for name in *; do
       echo "WARNING: $target exists but is not a symlink."
     fi
   else
-    if [ "$name" != 'install.sh' ] && [ "$name" != 'README.md' ] && [ "$name" != 'zsh' ]; then
+    if [ "$name" != 'install.sh' ] && [ "$name" != 'README.md' ] && [ "$name" != 'zsh' ] && [ "$name" != "VIM.md" ]; then
       echo "Creating $target"
       ln -s "$PWD/$name" "$target"
     fi

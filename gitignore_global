@@ -39,3 +39,8 @@ Thumbs.db
 # VIM
 ######################
 tags
+
+# Zeus
+# ####################
+custom_plan.rb
+zeus.json

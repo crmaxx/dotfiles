@@ -1,4 +1,3 @@
-export POW_DOMAINS=dev,lodev
+export POW_DOMAINS=dev
 export NEWRELIC_DISPATCHER=pow
 export POW_WORKERS=1
-export POW_TIMEOUT=12000

@@ -1,36 +1,38 @@
 # Unix
-alias tlf="tail -f"
-alias ln='ln -v'
-alias mkdir='mkdir -p'
-alias ...='../..'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
+alias -r tlf="tail -f"
+alias -r ln='ln -v'
+alias -r mkdir='mkdir -p'
+alias -r ...='../..'
+alias -r l='ls'
+alias -r ll='ls -al'
+alias -r lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
-alias e="$EDITOR"
-alias v="$VISUAL"
+alias -r e="$EDITOR"
+alias -r v="$VISUAL"
 
 # git
-alias gci="git pull --rebase && rake && git push"
+alias -r gci="git pull --rebase && rake && git push"
+alias -r gpo="git pull origin"
+alias -r gso="git push origin"
 
 # Bundler
-alias b="bundle"
-alias be="bundle exec"
+alias -r bi="bundle install"
+alias -r bu="bundle update"
+alias -r be="bundle exec"
 
 # Tests and Specs
-alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
-alias s="bundle exec rspec"
+alias -r t="ruby -I test"
+alias -r ber="bundle exec rspec"
 
 # Rubygems
-alias gi="gem install"
-alias giv="gem install -v"
+alias -r gi="gem install"
+alias -r giv="gem install -v"
 
 # Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias m="migrate"
-alias rk="rake"
-alias z="zeus"
+alias -r migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias -r m="migrate"
+alias -r rk="rake"
+alias -r z="zeus"

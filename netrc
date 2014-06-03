@@ -1,0 +1,6 @@
+machine api.heroku.com
+  login crmaxx@gmail.com
+  password a5e72de17e80fb0405dc0e930e13776658e6517f
+machine code.heroku.com
+  login crmaxx@gmail.com
+  password a5e72de17e80fb0405dc0e930e13776658e6517f

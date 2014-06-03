@@ -16,6 +16,7 @@
   ca = commit --amend # careful
   st = status
   br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen--> %cr%Creset by %Cblue%cN <%cE>%Creset' --abbrev-commit --date=relative
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
@@ -31,10 +32,12 @@
   branch = auto
   status = auto
 [merge]
-  tool = extMerge
-[mergetool "extMerge"]
-  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  tool = p4merge
+[mergetool "p4merge"]
+  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
   trustExitCode = false
+  keepBackup = false
+  prompt = false
 [pull]
   rebase = true
 [push]
