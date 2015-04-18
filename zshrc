@@ -61,9 +61,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
 
 export JRUBY_OPTS=--1.9
 
@@ -74,14 +72,37 @@ eval "$(direnv hook $0)"
 PATH=$HOME/bin:$PATH
 export EDITOR='subl -w'
 unsetopt correct_all
-
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+setopt no_nomatch
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
+
+# Gradle Lang Vars
+export GRADLE_HOME=/usr/local/Cellar/gradle/2.3/libexec
+export PATH=$PATH:$GRADLE_HOME/bin
+
+# Autocomplition for Teamocil
+compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Vagrant
+#export VAGRANT_DEFAULT_PROVIDER=parallels
+
+# Docker
+eval `boot2docker shellinit 2>/dev/null`
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/mzhukov/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+# Google App Engine
+export PATH=/Users/mzhukov/Work/Go/go_appengine:$PATH
+
+# Metasploit
+export MSF_DATABASE_CONFIG=/usr/local/share/metasploit-framework/config/database.yml

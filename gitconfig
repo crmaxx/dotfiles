@@ -4,7 +4,7 @@
 [core]
   excludesfile = /Users/mzhukov/.gitignore_global
   editor = subl -w
-  autocrlf = input
+  autocrlf = true
 [credential]
   helper = osxkeychain
 [alias]
@@ -32,7 +32,7 @@
   branch = auto
   status = auto
 [merge]
-  tool = p4merge
+  tool = p4mergetool
 [mergetool "p4merge"]
   cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
   trustExitCode = false
@@ -43,3 +43,16 @@
 [push]
   default = simple
 
+[filter "media"]
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
+[mergetool "p4mergetool"]
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+  trustExitCode = false
+[mergetool]
+  keepBackup = false
+[diff]
+  tool = p4mergetool
+[difftool "p4mergetool"]
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE

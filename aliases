@@ -32,7 +32,7 @@ alias -r gi="gem install"
 alias -r giv="gem install -v"
 
 # Rails
-alias -r migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias -r migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare && annotate"
 alias -r m="migrate"
 alias -r rk="rake"
 alias -r z="zeus"
